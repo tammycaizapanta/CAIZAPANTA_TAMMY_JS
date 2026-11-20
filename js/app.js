@@ -152,7 +152,20 @@ function comprarEntradas() {
 }
 
 function consultarCupos() {
-  console.log("Pendiente: consulta de cupos");
+  let mensaje;
+
+  if (cuposDisponibles > 10) {
+    mensaje = "Cupos disponibles";
+  } else if (cuposDisponibles >= 1 && cuposDisponibles <= 10) {
+    mensaje = "Últimos cupos disponibles";
+  } else {
+    mensaje = "Evento agotado";
+  }
+
+  const texto =
+    "Cupos disponibles: " + cuposDisponibles + " de " + CUPOS_INICIALES + "\n" + mensaje;
+  alert(texto);
+  console.log(texto);
 }
 
 function consultarIngresos() {
