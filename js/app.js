@@ -169,7 +169,13 @@ function consultarCupos() {
 }
 
 function consultarIngresos() {
-  console.log("Pendiente: consulta de ingresos");
+  const texto =
+    "INGRESOS ACUMULADOS\n\n" +
+    "Total de entradas vendidas: " + entradasVendidas + "\n" +
+    "Total de ingresos acumulados: $" + ingresosAcumulados.toFixed(2) + "\n" +
+    "Número de compras realizadas: " + comprasRealizadas;
+  alert(texto);
+  console.log(texto);
 }
 
 function mostrarResumenFinal() {
